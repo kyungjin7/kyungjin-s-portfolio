@@ -1,11 +1,11 @@
- <!-- Page Header -->
+    <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                       <%= @post.title %>
+                    <div class="post-heading" style = "font-size:3em; font-family:Vivaldi; text-align:center;">
+                        <%= @post.title %>
                     </div>
                 </div>
             </div>
@@ -16,13 +16,13 @@
     <article>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                  <%= @post.content %>
-                  <div>
-                      <a href="/posts/edit/<%= @post.id%>">Edit</a>
-                      <a href="/posts/delete/<%= @post.id%>">Delete</a>
-                    
-                     
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style='font-size:20px; font-family:Times;'>
+                    <%= markdown(@post.content) %>
+                    <div style="margin:10px;text-align:center;">
+                        <p style="margin-bottom:10px">----------------------------------------------------------------------------------------------------</p>
+                        <a href = "/posts/edit/<%= @post.id%>"><span style="text-decoration:underline;margin-right:10px">EDIT</span></a>
+                        <a href = "/posts/delete/<%= @post.id%>"><span style="text-decoration:underline; display:inline-block">DELETE</span></a>
+                    </div>
                 </div>
             </div>
         </div>

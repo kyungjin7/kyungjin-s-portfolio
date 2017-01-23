@@ -16,4 +16,5 @@
 //= require scrollreveal
 //= require magnificpopup
 //= require creative
+//= require md_simple_editor
 //= require turbolinks

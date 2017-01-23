@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
     end
     
     def create
-        Post.create(title: params['title'], content: params['content'])
+        Post.create(title: params['title'], content: params['content'], name: params['name'])
         redirect_to '/blogs'
 
     end
